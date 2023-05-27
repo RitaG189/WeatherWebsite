@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Weather</title>
+</head>
+<body id="background">
+
+    <div class="grid grid-cols-12">
+        
+    
+        <aside id="default-sidebar" class="col-span-3 top-0 h-screen shadow" aria-label="Sidebar">
+            <div class="h-full px-10 py-4 overflow-y-auto background-sidebar">
+
+                <!-- weather display -->
+                <div class="text-center my-10">
+                    <h1 class="text-4xl py-2">Monday</h1>
+                    <img id="weather-icon" src="assets/sun.png" alt="weather today" class="w-60 py-10 mx-auto">
+                    <h1 class="text-4xl">12ºC</h1>
+                </div>
+
+                <hr class="my-10 mx-10">
+
+                <div>
+                    <p>Rain:</p>
+                    <p>Info:</p>
+
+                </div>
+
+            </div>
+        </aside>
+
+        <div class="col-span-9">
+
+            <!-- search bar -->
+            <div class="flex items-center px-8 my-8">
+
+                
+                <input type="text" class="text-gray-900 placeholder-black text-sm block p-2.5 text-center bg-white rounded-xl shadow border border-gray-100" 
+                        placeholder="Search for places ...">
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-center">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+
+            </div>
+
+            <div class="px-14 my-8">
+                <h5>Week</h5>
+            </div>
+            
+            <div class="grid grid-cols-7 gap-8 right-0 px-8 my-8">
+
+                <a class="block max-w-sm p-4 bg-white border border-gray-100 hover:bg-gray-800 rounded-xl shadow weather-card">
+                    <h5 class="text-lg tracking-tight text-gray-900 text-center">Sun</h5>
+                    <img class="py-4 mx-auto w-14" src="assets/sun.png" alt="sun">
+                    <p class="font-normal text-gray-700 text-center">12º / 8º</p>
+                </a>
+                
+                <a class="block max-w-sm p-4 bg-white border border-gray-100 hover:bg-gray-800 rounded-xl shadow weather-card">
+                    <h5 class="text-lg tracking-tight text-gray-900 text-center">Mon</h5>
+                    <img class="py-4 mx-auto w-14" src="assets/cloudy.png" alt="sun">
+                    <p class="font-normal text-gray-700 text-center">12º / 8º</p>
+                </a>
+                <a class="block max-w-sm p-4 bg-white border border-gray-100 hover:bg-gray-800 rounded-xl shadow weather-card">
+                    <h5 class="text-lg tracking-tight text-gray-900 text-center">Tue</h5>
+                    <img class="py-4 mx-auto w-14" src="assets/cloudy.png" alt="sun">
+                    <p class="font-normal text-gray-700 text-center">12º / 8º</p>
+                </a>
+                <a class="block max-w-sm p-4 bg-white border border-gray-100 hover:bg-gray-800 rounded-xl shadow weather-card">
+                    <h5 class="text-lg tracking-tight text-gray-900 text-center">Wed</h5>
+                    <img class="py-4 mx-auto w-14" src="assets/cloudy.png" alt="sun">
+                    <p class="font-normal text-gray-700 text-center">12º / 8º</p>
+                </a>
+                <a class="block max-w-sm p-4 bg-white border border-gray-100 hover:bg-gray-800 rounded-xl shadow weather-card">
+                    <h5 class="text-lg tracking-tight text-gray-900 text-center">Thu</h5>
+                    <img class="py-4 mx-auto w-14" src="assets/cloudy.png" alt="sun">
+                    <p class="font-normal text-gray-700 text-center">12º / 8º</p>
+                </a>
+                <a class="block max-w-sm p-4 bg-white border border-gray-100 hover:bg-gray-800 rounded-xl shadow weather-card">
+                    <h5 class="text-lg tracking-tight text-gray-900 text-center">Fri</h5>
+                    <img class="py-4 mx-auto w-14" src="assets/cloudy.png" alt="sun">
+                    <p class="font-normal text-gray-700 text-center">12º / 8º</p>
+                </a>
+                <a class="block max-w-sm p-4 bg-white border border-gray-100 hover:bg-gray-800 rounded-xl shadow weather-card">
+                    <h5 class="text-lg tracking-tight text-gray-900 text-center">Sat</h5>
+                    <img class="py-4 mx-auto w-14" src="assets/cloudy.png" alt="sun">
+                    <p class="font-normal text-gray-700 text-center">12º / 8º</p>
+                </a>
+            </div>
+            
+    
+            <div class="px-14 my-8">
+                <h5>Today</h5>
+            </div>
+    
+            <div class="grid grid-cols-3 gap-16 right-0 px-16 my-8">
+                
+                <a class="block max-w-sm p-6 bg-white border border-gray-100 rounded-xl shadow">
+
+                    <div class="grid grid-cols-2">
+
+                        <div class="col-span-1">
+                            <h5 class="text-2xl tracking-tight text-gray-500 text-left">Wind</h5>
+                            <p class="font-normal text-gray-700 text-left">12º / 8º</p>
+                        </div>
+
+                        <div class="col-span-1">
+                            <img class="py-5 mx-auto w-16" src="assets/cloudy.png" alt="sun">
+                        </div>
+
+                    </div>
+                    
+                </a>
+
+                <a class="block max-w-sm p-6 bg-white border border-gray-100 rounded-xl shadow">
+
+
+                    <div class="grid grid-cols-2">
+
+                        <div class="col-span-1">
+                            <h5 class="text-2xl tracking-tight text-gray-500 text-left">Humidity</h5>
+                            <p class="font-normal text-gray-700 text-left">10%</p>
+                        </div>
+
+                        <div class="col-span-1">
+                            <img class="py-5 mx-auto w-16" src="assets/temperature.png" alt="sun">  
+                        </div>
+
+                    </div>
+   
+                </a>
+
+                <a class="block max-w-sm p-6 bg-white border border-gray-100 rounded-xl shadow ">
+
+                    <div class="grid grid-cols-2">
+
+                        <div class="col-span-1">
+                            <h5 class="text-2xl tracking-tight text-gray-500 text-left">UV</h5>
+                            <p class="font-normal text-gray-700 text-left">12º / 8º</p>
+                        </div>
+
+                        <div class="col-span-1">
+                            <img class="py-5 mx-auto w-16" src="assets/ultraviolet.png" alt="sun"> 
+                        </div>
+
+                    </div>   
+                    
+                </a>
+
+                <a class="block max-w-sm p-6 bg-white border border-gray-100 rounded-xl shadow ">
+
+                    <div class="grid grid-cols-2">
+
+                        <div class="col-span-1">
+                            <h5 class="text-2xl tracking-tight text-gray-500 text-left">Sunrise</h5>
+                            <p class="font-normal text-gray-700 text-left">12º / 8º</p>
+                        </div>
+
+                        <div class="col-span-1">
+                            <img class="py-5 mx-auto w-16" src="assets/sunrise.png" alt="sun">
+                        </div>
+
+                    </div>  
+                </a>
+
+                <a class="block max-w-sm p-6 bg-white border border-gray-100 rounded-xl shadow ">
+
+                    <div class="grid grid-cols-2">
+
+                        <div class="col-span-1">
+                            <h5 class="text-2xl tracking-tight text-gray-500 text-left">Sunset</h5>
+                            <p class="font-normal text-gray-700 text-left">12º / 8º</p>
+                        </div>
+
+                        <div class="col-span-1">
+                            <img class="py-5 mx-auto w-16" src="assets/sunset.png" alt="sun">
+                        </div>
+
+                    </div>  
+                </a>
+                
+            </div>
+            
+
+        </div>
+
+        
+
+    </div>
+    
+</body>
+</html>
